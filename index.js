@@ -3,7 +3,10 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send({ message: 'ok'})
+    res.send({
+        message: 'ok',
+        date: new Date()
+    })
 })
 
 app.listen(3000, () => {
